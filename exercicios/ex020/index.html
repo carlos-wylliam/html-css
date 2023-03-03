@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsividade</title>
+    <style>
+        body{
+            background-color: gray;
+        }
+        main{
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+        /* tamanho minimo da div main vai ser de 240px quando for-se reduzindo */
+            min-width: 240px;
+        /* tamanho máximo que a div main vai ter é de 800px de largura independente do tamanho da tela */
+            max-width: 800px;
+            margin: auto;
+        }
+        img{
+            width: 100%;
+        }
+        
+    </style>
+</head>
+<body>
+    
+    <main>
+        <h1>Testando Responsividade</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt deleniti at culpa facere pariatur, quidem vero dignissimos, obcaecati eveniet recusandae sequi? Dicta, ex? Dolores earum iusto, accusamus deleniti tempore expedita! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro repellendus officiis necessitatibus? Sed ullam tenetur praesentium veniam! Cupiditate inventore perspiciatis amet distinctio delectus voluptas, nisi, ipsam iure fugiat, quasi odio.</p>
+        <picture>
+            <source media="(max-width:600px )" srcset="irina-blok-pq.jpg">
+            <img src="irina-blok.jpg" alt="irina-blok">
+        </picture>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloremque accusantium cum explicabo consectetur quisquam? Doloremque et accusantium repellendus, laboriosam ut illum totam. Perspiciatis nesciunt aliquid pariatur quidem, cupiditate magnam ut. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Architecto maxime suscipit, repudiandae temporibus dolorum fugit magnam, quidem odio, facilis ullam aliquam ea molestias? Dignissimos beatae, consequatur odit magni quam modi?</p>
+    </main>
+</body>
+</html>

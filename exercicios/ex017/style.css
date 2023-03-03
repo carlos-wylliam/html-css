@@ -1,0 +1,27 @@
+body{
+    background-color: #c1edfa;
+    text-align: justify;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 16px;
+}
+h1{
+    text-align: center;
+    background-color: #122F38;
+    color: white;
+}
+h2{
+    color: #122F38;
+}
+h3{
+    color: #266578;
+}
+
+.basico{
+    color: green;
+}
+.intermediario{
+    color: rgb(206, 206, 1);
+}
+.avançado{
+    color: red;
+}
