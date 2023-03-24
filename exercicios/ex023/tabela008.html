@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estilizando Colunas</title>
+    <style>
+        h1{
+            text-align: center;
+        }
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        table{
+            margin: auto;
+            border-collapse:collapse;
+            width: 500px;
+        }
+        tr,td, th{
+            border: 1px solid gray;
+            padding: 10px;
+            
+        }
+        col.nome{
+            background-color: rgba(14, 205, 205, 0.635);
+        }
+        col.sexo{
+            background-color: bisque;
+        }
+        /* col.idade{
+            background-color: greenyellow;
+        }
+        col.profissao{
+            background-color: burlywood;
+        } */
+    </style>
+</head>
+<body>
+    
+    <h1>Usando o colgroup</h1>
+    <table>
+        <colgroup>
+            <col class="nome">
+            <col class="sexo" span="3">
+            <col class="idade">
+            <col class="profissao">
+        </colgroup>
+        <thead>
+            <th>Nome</th>
+            <th>Sexo</th>
+            <th>Idade</th>
+            <th>Profissão</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Carlos</td>
+                <td>Masculino</td>
+                <td>19 anos</td>
+                <td>Desenvolvedor front-end</td>
+            </tr>
+            <tr>
+                <td>Jose ecio</td>
+                <td>Masculino</td>
+                <td>19 anos</td>
+                <td>Carcinicultor</td>
+            </tr>
+            <tr>
+                <td>Joyce</td>
+                <td>Feminino</td>
+                <td>18 anos</td>
+                <td>Professora de inglês</td>
+            </tr>
+            <tr>
+                <td>Gabriel</td>
+                <td>Masculino</td>
+                <td>18 anos</td>
+                <td>Desenvolvedor back-end</td>
+            </tr>
+            <tr>
+                <td>Cristiano Ronaldo</td>
+                <td>Masculino</td>
+                <td>37 anos</td>
+                <td>Jogador de futebol</td>
+            </tr>
+            <tr>
+                <td>Rony rustico</td>
+                <td>Masculino</td>
+                <td>23 anos</td>
+                <td>Jogador de futebol</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
