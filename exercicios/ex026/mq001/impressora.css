@@ -1,0 +1,18 @@
+@charset "UTF-8";
+/* estilo para impressoras */
+*{
+    margin: 10px;
+    padding: 10px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+menu{
+    display: none;
+}
+article>p{
+    font-size: 1.5em;
+    line-height: 1.5em;
+}
+article::after{
+    content: "Essa noticia foi impressa atraves do site www.thenewyorktimes.com.us";
+}
