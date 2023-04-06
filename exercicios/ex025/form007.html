@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Exemplo de formulário</h1>
+    <form action="cadastro.php" method="post" autocomplete="on">
+      <p>
+        <!--Titulo do input Estado-->
+        <label for="iestado">Estado</label>
+        <!-- select tag pra criar as seleçoes-->
+        <select name="estado" id="iestado">
+          <option value="" selected>---Escolha---</option>
+          <!-- Da pra criar sub-titulos dentro das selecoes com label-->
+          <optgroup label="Região sudeste">
+            <option value="MG">Minas Gerais</option>
+            <option value="SP">São Paulo</option>
+            <option value="PA">Parana</option>
+          </optgroup>
+
+          <optgroup label="Região Nordeste">
+            <option value="PB">Paraiba</option>
+            <option value="RN">Rio grande do norte</option>
+            <option value="CE">Ceará</option>
+          </optgroup>
+        </select>
+      </p>
+      <p>
+        <!--Pra esse tipo de seletor funcionar tenho que adicionar o parametro list no input:text e colocar o id que eu criei no datalist-->
+        <label for="iprofissao">Profissao</label>
+        <input type="text" name="profissao" id="iprofissao" list="iprofs">
+        <datalist id="iprofs">
+            <option value="ADM">Administrador</option>
+            <option value="MED">Médico</option>
+            <option value="DEV">Desenvolvedor</option>
+        </datalist>
+      </p>
+      <p>
+        <label for="imsg">Mensagem</label>
+        <textarea name="msg" id="imsg" cols="30" rows="10"></textarea>
+      </p>
+    </form>
+  </body>
+</html>

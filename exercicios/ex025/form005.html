@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Exemplo de formulário</h1>
+    <form action="cadastro.php" method="post">
+       <!--checked = automaticamente um input já esta marcado porem pode ser desmarcado e alterado as opções--> 
+       <!--o input do tipo radio deve ter o mesmo nome para poder desmarcar e marcar sem problemas-->
+        <fieldset>
+            <legend>Sexo</legend>
+            <p>
+                <input type="radio" name="sexo" id="imas" checked><label for="imas">masculino</label><br>
+                <input type="radio" name="sexo" id="ifem"><label for="ifem">feminino</label><br>
+            </p>
+        </fieldset>
+        <fieldset>
+            <legend>sexo</legend>
+            <p>
+                <input type="checkbox" name="volei" id="ivolei"><label for="ivolei">Vôlei</label><br>
+                <input type="checkbox" name="basquete" id="ibasq"><label for="ibasq">Basquete</label><br>
+                <input type="checkbox" name="futebol" id="ifut" checked><label for="ifut">Futebol</label><br>
+                <input type="checkbox" name="tenis" id="itenis"><label for="itenis">Tênis de mesa</label><br>
+            </p>
+        </fieldset>
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+    </form>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!--autocomplete="email" = completa automaticamente com um email já escrito-->
+    <!--pattern="^\(\d{2}\)\d{4,5}-\d{4}$" -->
+    <!--\(\d{2}\) = iniciando o parametro com ^, dois digitos dentro de um parenteses, (83) -->
+    <!--\d{4,5}-= quatro ou cinco digitos em seguida de um traço -->
+    <!--\d{4}$= quatro digitos após o traço e finalizando o parametro com $-->
+    <h1>Teste de formulário</h1>
+
+    <form action="cadastro.php" method="post">
+      <fieldset>
+        <legend>Dados pessoas</legend>
+        <p>
+          <label for="inome">Nome:</label>
+          <input type="text" name="nome" id="inome" />
+        </p>
+        <p>
+          <label for="iemail">Email:</label>
+          <input
+            type="email"
+            name="email"
+            id="iemail"
+            autocomplete="email"
+            required
+          />
+        </p>
+        <p>
+          <label for="itelefone">Telefone/Celular:</label>
+          <input
+            type="tel"
+            name="telefone__celular"
+            id="itelefone"
+            autocomplete="tel"
+            pattern="^\(\d{2}\)\d{4,5}-\d{4}$"
+            required
+            placeholder="(xx)0000-0000"
+          />
+        </p>
+        <p>
+          <input type="submit" value="Enviar" />
+          <input type="reset" value="Limpar" />
+        </p>
+      </fieldset>
+    </form>
+  </body>
+</html>
