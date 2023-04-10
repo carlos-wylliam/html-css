@@ -1,1 +1,6 @@
-/* configuração para dispositivos em pé modo retrato */
+@charset "UTF-8";
+/* aparelho em pé (retrato) */
+body{
+    background-image: url(../imagens/cev-portrait.jpg);
+    background-position: center bottom;
+}
