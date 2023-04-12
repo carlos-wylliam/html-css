@@ -6,12 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Media Query</title>
     <link rel="stylesheet" href="estilos/style.css" />
-    <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+    <link rel="stylesheet" href="estilos/media-queries.css">
   </head>
-  <body>
+  <body onresize="mudouTamanho()">
     <main>
       <header>
         <h1>Meu site</h1>
@@ -64,6 +62,15 @@
     </main>
   </body>
   <script>
+    // função para que quando a tela mudar de tamanho as opções no iten seja forçadamente mostrado
+    function mudouTamanho(){
+      if (window.innerWidth >= 768){
+        itens.style.display = 'block'
+      } else {
+        itens.style.display = 'none'
+      }
+    }
+    // função para criar o menu "hamburguer"
     function clickMenu(){
         if(itens.style.display == 'block'){
             itens.style.display = 'none'
