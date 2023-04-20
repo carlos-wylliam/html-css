@@ -1,0 +1,40 @@
+/* alteração apenas na primeira linha, geralmente usado em configurações de texto */
+p::first-line{
+    color: rgb(111, 130, 3);
+}
+
+/* Configura apenas a primeira letra */
+p::first-letter{
+    font-size: 5em;
+    color: red;
+}
+li{
+    list-style: none;
+}
+
+/* too have, li:after */
+li:before{
+    content: '';
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-image: url(./2991148.png);
+    background-size: cover;
+    background-position: center;
+    display: inline-block
+}
+p::selection{
+    background-color: yellow;
+    color: black;
+}
+
+input:focus{
+    color: blue;
+}
+/* estiliza apenas o elemento filho */
+/* li:first-of-type */
+/* li:nth-child(3) */
+/* li:nth-of-type(3) */
+li:first-child{
+    color: blue;
+}

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Learning Flex Box</title>
+    <style>
+      /* devo atribuir o display flex para a tag que vai ser o elemento container do flexbox */
+      /* eixo principal = vertical, eixo secundario = horizontal */
+
+      /* 1º propriedade flex direction definiar qual vai ser o eixo principal e perpendicular */
+      /* por padrão (flex-direction:row;) o eixo principal será o horizontal */
+      /* flex-direction: row-reverse; horizontal reverso, contrário */
+      /* também posso definir o eixo principal como o vertical basta eu usar o (flex-direction:column) */
+      /* (flex-direction:column-reverse;), vertical reverso ao contrário */
+
+      /* 2º propriedade justify-content, alinhar os elementos no eixo principal (horizontalmente) */
+      /* justify-content: flex-start;
+            os elementos são agrupados no lado esquerdo como padrão */
+      /* justify-content: flex-end;
+            os elementos são agrupados no lado direito */
+      /* justify-content: center;
+            os elementos são distribuidos de forma centralizada na tela */
+      /* justify-content:space-between;
+            os elementos são distruidos com um espacamento entre eles de forma exata. */
+      /* justify-content:space-around;
+            é parecido com o space-between, mas tem uma diferença a diferença é que no primeiro elemento e no ultimo elemento tem uma margin (lado esquerdo e no lado direito) */
+
+      /* 3º propriedade align-items, alinhando os elementos no eixo perpendicular, secundario, vertical */
+      /* align-items:flex-start;
+      os elementos são alinhados no inicio do eixo perpendicular */
+      /* align-items:flex-end;
+      os elementos são alinhas no fim do eixo perpendicular */
+      /* align-items:center 
+      os elementos ficam centralizados no MEIO da página, centralizados tanto horizontalmente quanto verticalmente */
+      /* align-items:stretch
+      os elementos ocupam todo o espaço do eixo perpendicular. */
+      /* align-items:baseline
+      os elementos ficam alinhados conforme o conteudo dentro dele. */
+
+      /* 4º propriedade flex-wrap; quebra de linha praticamente */
+      /* Por padrão os elementos estão ou flex-wrap: no-wrap; ou seja vai colocar sempre todos os conteudos em uma só linha. */
+      /* flex-wrap; wrap;
+      serve pra quebrar a linha e passar para a segunda linha */
+      /* flex-wrap: wrap-reverse 
+      é o contrario do wrap, de vez quebrar a linha para baixo quebra para cima*/
+
+      /* 5º propriedade flex-flow; */
+      /* flex-flow: row wrap *
+      para usar isso o flex-direction tem que estar em row/
+      /* flex-flow: collum wrap 
+      para usar isso o flex-direction tem que estar em collum*/
+
+      /* 6º propriedade alignt-content, alinhar os elementos em mais de um linha, sempre que estiver utilizado o wrap e essas linhas vão ser alinhadas no sentindo perpendicular */
+      /* align-content:flex-start
+      bem parecido com o do align-items só que eu consigo alinhas várias linhas; */
+      /* align-content:flex-end; 
+       bem parecido com o do align-items só que eu consigo alinhas várias linhas*/
+      /* align-content:center 
+       bem parecido com o do align-items só que eu consigo alinhas várias linhas*/
+      /* align-content: space-between
+        bem parecido com o do align-items só que eu consigo alinhas várias linhas */
+      /* align-content:space-around;
+         bem parecido com o do align-items só que eu consigo alinhas várias linhas */
+
+      /* 7º propriedade gap, row-gap:;, column-gap:; */
+      /* gap, é tipo uma margin, mas que eu consigo dar um espacamento tanto no eixo vertical quanto horizontal */
+      /* row-gap, dou um espacamento apenas no eixo horizontal */
+      /* column-gap, dou um escapamento apenas no eixo vertical */
+      /* shorthando gap
+            gap: 10px 20px;
+            (horizontal, vertical) */
+
+      /* Estilizando os elementos filhos */
+      /* 1º propriedade order, consigo alterar as ordens dos elementos filhos de qualquer forma */
+      /* 2º propriedade flex-grow 
+    flex-grow: 2; aumenta o dobro mas um dobro proporcional*/
+      /* 3º propriedade flex-shrink:; 
+        para poder usar essa propriedade o elemento pai deve ter uma largura máxima e não pode ter o flex-wrap: wrap;
+        o flex-sherink é o contrario do flex-grow, encolhe o elemento de forma proporcional*/
+        /* 4º propriedade flex-basis; */
+        /* 5º propriedade flex é tipo uma shorthand para, flex-grow, flex-shrink, flex-basis */
+        /* 5º propriedade align-self; 
+        é tipo o align-items só que para os elementos filhos então tem as propriedades de, flex-start, flex-end, center, */
+
+      .container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: nowrap;
+        align-content: center;
+        row-gap: 10px;
+        column-gap: 30px;
+
+        /* supostamente só consigo usar os parametros do align-itemns, align-content, flex-start e flex-end se eu determinar uma altura para o elemento pai */
+        padding: 16px;
+        height: 500px;
+        /* width: 400px; - usei no flex-shrink: ; */
+      }
+      body {
+        background-color: #f9eac3;
+        padding: 10px;
+      }
+      .q1 {
+        background-color: #c6d8f0;
+
+        order: 0;
+        /* flex-grow: 0;
+        flex-shrink: 0;
+        flex-basis: auto; */
+        flex: 0 0 auto;
+        align-self: flex-start;
+      }
+      .q2 {
+        background-color: #d8bfd8;
+
+        order: 0;
+        /* flex-grow: 0;
+        flex-shrink: 0;
+        flex-basis: auto; */
+        flex: 0 0 400px;
+      }
+      .q3 {
+        background-color: #ff9999;
+
+        order: 0;
+        /* flex-grow: 0;
+        flex-shrink: 0;
+        flex-basis: auto; */
+        flex: 0 0 auto;
+        align-self:flex-end;
+      }
+      .q1,.q2,.q3 {
+        height: 150px;
+        width: 150px;
+        text-align: center;
+        font-size: 40px;
+        font-family: "Courier New", Courier, monospace;
+        border-radius: 16px;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="container">
+      <div class="q1">1</div>
+      <div class="q2">2</div>
+      <div class="q3">3</div>
+      <!-- <div class="q1">4</div>
+      <div class="q2">5</div>
+      <div class="q3">6</div>
+      <div class="q1">7</div>
+      <div class="q2">8</div>
+      <div class="q3">9</div>
+      <div class="q1">10</div>
+      <div class="q2">11</div>
+      <div class="q3">12</div> -->
+    </main>
+  </body>
+</html>
